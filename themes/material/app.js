@@ -851,14 +851,14 @@ function file_pdf(path) {
 // 图片展示
 function file_image(path) {
   var url = window.location.origin + path;
-  // console.log(window.location.pathname)
+  console.log(window.location.pathname)
   const currentPathname = window.location.pathname
   const lastIndex = currentPathname.lastIndexOf('/');
   const fatherPathname = currentPathname.slice(0, lastIndex + 1);
-  // console.log(fatherPathname)
+  console.log(fatherPathname)
   let target_children = localStorage.getItem(fatherPathname);
-  // console.log(`fatherPathname: ${fatherPathname}`);
-  // console.log(target_children)
+  console.log(`fatherPathname: ${fatherPathname}`);
+  console.log(target_children)
   let targetText = '';
   if (target_children) {
     try {
@@ -873,8 +873,8 @@ function file_image(path) {
     if (target_children.length > 0 && target_children.includes(path)) {
       let len = target_children.length;
       let cur = target_children.indexOf(path);
-      // console.log(`len = ${len}`)
-      // console.log(`cur = ${cur}`)
+      console.log(`len = ${len}`)
+      console.log(`cur = ${cur}`)
       let prev_child = (cur - 1 > -1) ? target_children[cur - 1] : null;
       let next_child = (cur + 1 < len) ? target_children[cur + 1] : null;
       targetText = `
